@@ -1,6 +1,6 @@
 #!/bin/bash
-apt-get update
-apt-get install -y apache2
+sudo yum update
+sudo yum install -y apache2
 
 cd /var/www/html
 
@@ -8,7 +8,7 @@ cd /var/www/html
 rm index.html
 
 # Download your index.html file from GitHub
-wget https://raw.githubusercontent.com/your-username/your-repo/main/index.html
+git clone https://github.com/bobbysstudies/EC2/blob/main/index.html
 
 # Restart Apache to apply the changes
-service apache2 restart
+sudo service apache2 restart
