@@ -1,0 +1,14 @@
+#!/bin/bash
+apt-get update
+apt-get install -y apache2
+
+cd /var/www/html
+
+# Remove the default Apache index.html file
+rm index.html
+
+# Download your index.html file from GitHub
+wget https://raw.githubusercontent.com/your-username/your-repo/main/index.html
+
+# Restart Apache to apply the changes
+service apache2 restart
